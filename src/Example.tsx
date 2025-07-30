@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import reactSvg from './assets/react.svg';
 import { Button } from './components/ui/button';
 
 const CASH_PER_CLICK = 1;
@@ -51,9 +52,7 @@ export function Example() {
     <div className='h-screen w-screen flex items-center justify-center flex-col gap-4'>
       <div>
 
-        <a href="https://github.com/gbenitesgonsales" target="_blank">
-          <img src={"https://avatars.githubusercontent.com/gbenitesgonsales"} className="size-24 rounded-full" alt="Vite logo" />
-        </a>
+
 
       </div>
       <p>
@@ -61,7 +60,8 @@ export function Example() {
         Vite, React, Tailwind CSS, and Shadcn/ui.
       </p>
       <div className='flex items-center flex-col'>
-        <Button onClick={onClick}>
+        <Button variant="ghost" onClick={onClick} className='size-auto flex-col  active:scale-105 text-[#00D8FF]'>
+          <img src={reactSvg} className="size-24 rounded-full " alt="Vite logo" />
           Cash ${cash}
         </Button>
 

@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { Button } from './components/ui/button';
 
 const CASH_PER_CLICK = 1;
-const UPDATE_CLICK_COST_MULTIPLIER = 1.5;
-const UPDATE_TICK_COST_MULTIPLIER = 2;
+const UPDATE_CLICK_COST_MULTIPLIER = 1.1;
+const UPDATE_TICK_COST_MULTIPLIER = 1.2;
 
 export function Example() {
   const [cash, setCash] = useState(0);
@@ -45,7 +45,7 @@ export function Example() {
   useEffect(() => {
     const interval = setInterval(tick, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [tick]);
 
   return (
     <div className='h-screen w-screen flex items-center justify-center flex-col gap-4'>

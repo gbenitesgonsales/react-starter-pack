@@ -1,0 +1,76 @@
+.ProseMirror {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  /* Opcional, mas pode ajudar em edge cases */
+  white-space: pre-wrap;
+}
+
+.tiptap h3 {
+  @apply text-lg my-2;
+}
+
+.tiptap h2 {
+  @apply text-xl my-2;
+}
+
+.tiptap h1 {
+  @apply font-medium text-2xl border-b pb-1 mb-2;
+}
+
+.tiptap {
+  @apply p-4 rounded-md;
+}
+
+.tiptap table {
+  @apply border-collapse border-spacing-0 border;
+}
+
+.tiptap table tr {
+  @apply border-b border-border;
+}
+
+.tiptap table th {
+  @apply bg-muted text-muted-foreground p-2 border;
+}
+
+.tiptap table tr:nth-child(odd) {
+  @apply bg-muted;
+}
+
+.tiptap table td {
+  @apply p-2 border;
+}
+
+.tiptap table td,
+.tiptap table th {
+  @apply relative;
+}
+
+.tiptap table .column-resize-handle {
+  @apply bg-blue-600/20 w-2 -right-1 bottom-0 top-0 absolute pointer-events-none z-10;
+}
+
+.tiptap.resize-cursor {
+  cursor: ew-resize;
+  cursor: col-resize;
+}
+
+.tiptap .selectedCell:after {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+  @apply bg-blue-600/20
+}
+
+.tiptap strong {
+  @apply text-current;
+}
+
+.tiptap p {
+  min-height: 10px;
+}
